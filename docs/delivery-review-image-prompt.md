@@ -1,0 +1,5 @@
+# Delivery review photo
+
+Generated using built-in imagegen. Saved asset: `public/images/delivery-review.png`.
+
+Prompt: Photorealistic editorial photograph for software agency collaborative delivery section, landscape 4:3. Three diverse software professionals in their late twenties and thirties gathered closely around one laptop at a dark walnut meeting table in a sophisticated modern office. One engineer points at the laptop showing abstract interface wireframes, another listens attentively, third holds a notebook. Natural candid collaborative project review, genuine expressions, realistic hands and skin texture. Medium wide framing showing all three people clearly and laptop in foreground. Charcoal office, glass partitions, balanced soft daylight from side windows, subtle cool reflections, faces well lit and clearly visible. Professional premium documentary photography, believable real workplace, no sci-fi, no text, no logos, no watermark. Avoid overly dark exposure, avoid staged handshake. This illustrates regular project reviews and customer collaboration. Save local artifact.

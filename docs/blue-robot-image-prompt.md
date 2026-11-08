@@ -1,0 +1,7 @@
+# Blue robot reference variant
+
+Tool: built-in image generation. Reference: the user's blue robot image supplied in chat. Intended asset: `public/images/ai-solutions-blue-robot.png`.
+
+## Final prompt
+
+Create an image closely matching the user's latest reference image of a blue humanoid robot interacting with a cyan holographic display. The reference image is the visual target. Preserve its composition: a sophisticated feminine humanoid robot on the right in clean left-facing side profile, head at upper right, one hand raised at lower left touching a vertical luminous cyan digital panel on the left. Glossy deep cyan blue ceramic armor, black neck mechanisms and cables, intricate circular exposed ear mechanism glowing warm amber gold, delicate golden circuit-like points across the cheek and temple, orange-gold shoulder details. Robot face must be elegant and lifelike with fine mechanical details, not skeletal or silver. Large translucent blue interface panels close to the hand and head, abstract illegible code texture, no readable text. Dramatic cyan screen lighting across face, warm gold accents, deep dark teal technology lab background. Photorealistic premium cinematic sci-fi image. Portrait aspect ratio 4:5. Fill entire image edge to edge with the scene; no rounded corners, no frame, no website UI, no labels, no logos, no watermark. Match the reference robot design, pose, color balance and crop closely. This is a still image to later animate in a video tool. Save a local artifact and report its path if supported.

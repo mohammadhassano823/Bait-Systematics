@@ -1,0 +1,22 @@
+# dependencies & builds
+node_modules
+.next
+.next-dev
+.next-verify
+out
+
+# environment (keep only .env.example in the repo)
+.env
+.env*.local
+
+# logs & OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# local-only material (reference screenshots, old static site, source images already copied into public/)
+.codex
+legacy-html
+/adil.png
+/Logo.png
+/Bait Technology Neon Logo Wallpaper.png
