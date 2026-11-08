@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SiteFooter from '@/components/SiteFooter';
-import hassanPhoto from '@/public/team/muhammad-hassan.jpeg';
-import adilPhoto from '@/public/team/adil.png';
+import hassanPhoto from '@/public/team/muhammad-hassan-co-founder-bait-systematics.jpg';
+import adilPhoto from '@/public/team/muhammad-adil-co-founder-bait-systematics.jpg';
 import PageHero from '@/components/PageHero';
 import { ArrowUpRight, Target, Compass, Code2, MessageSquare, ShieldCheck, BadgeCheck } from 'lucide-react';
 
-export const metadata = { title: 'About Bait Systematics | Muhammad Hassan & Muhammad Adil', description: 'Bait Systematics is the technology company of BAIT International Group, a licensed overseas recruitment group trusted since 1967. Meet co-founders Muhammad Hassan and Muhammad Adil.', alternates: { canonical: '/about' } };
+export const metadata = { title: 'About Bait Systematics — Founders Muhammad Hassan & Muhammad Adil | BAIT International Group', description: 'Bait Systematics is the technology company of BAIT International Group, a licensed overseas recruitment group trusted since 1967. Meet co-founders Muhammad Hassan and Muhammad Adil.', alternates: { canonical: '/about' } };
 
 const VALUES = [
  { title: 'Integrity', description: 'Honest estimates, honest timelines and honest advice — even when it is not what you hoped to hear.', Icon: ShieldCheck },

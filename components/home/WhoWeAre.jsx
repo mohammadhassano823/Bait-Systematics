@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, Check } from 'lucide-react';
 import Image from 'next/image';
-import hassanPhoto from '@/public/team/muhammad-hassan.jpeg';
-import adilPhoto from '@/public/team/adil.png';
+import hassanPhoto from '@/public/team/muhammad-hassan-co-founder-bait-systematics.jpg';
+import adilPhoto from '@/public/team/muhammad-adil-co-founder-bait-systematics.jpg';
 
 const EASE = [0.16, 1, 0.3, 1];
 const POINTS = [

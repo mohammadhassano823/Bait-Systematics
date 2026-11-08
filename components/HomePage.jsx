@@ -225,11 +225,12 @@ export default class HomePage extends Component {
 <span className="sf-hero-client-label">Trusted by<strong>growing brands</strong></span>
 </div>
 <h1 style={{ margin: "26px 0 0", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: "800", lineHeight: "0.98", letterSpacing: "-0.04em" }}>
+<span className="sf-hero-seo"><b>Bait Systematics</b> — software house in Manchester &amp; Faisalabad</span>
 <span className="sf-mask"><span className="sf-rise" style={{ animationDelay: ".1s" }}>Build.</span></span>
 <span className="sf-mask"><span className="sf-rise" style={{ animationDelay: ".2s" }}>Innovate.</span></span>
 <span className="sf-mask"><span className="sf-rise" style={{ animationDelay: ".3s" }}><span style={{ color: v.accent }}>Grow.</span></span></span>
 </h1>
-<p className="sf-up sf-d4 sf-hero-description">Websites, apps and automation that <strong>bring in customers and give your team time back.</strong> One senior team, from your first idea to launch and beyond.</p>
+<p className="sf-up sf-d4 sf-hero-description">Websites, mobile apps, AI software and business systems that <strong>bring in customers and give your team time back.</strong> One senior team, from your first idea to launch and beyond.</p>
 <div className="sf-up sf-d5 sf-hero-actions" style={{ display: "flex", flexWrap: "wrap", gap: "12px", marginTop: "38px" }}>
 <a className="sf-btn" href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "58px", padding: "0 30px", borderRadius: "999px", background: v.accent, color: '#FFFFFF', fontWeight: "700", fontSize: "16px", textDecoration: "none" }}>Book a free strategy call
 <svg className="sf-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>

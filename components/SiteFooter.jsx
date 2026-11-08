@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { CookieSettingsLink } from '@/components/CookieConsent';
-import { SERVICES, FOOTER_SERVICES } from '@/lib/services';
+import { SERVICES, FOOTER_SERVICES, serviceHref } from '@/lib/services';
 import { SOCIAL, REVIEW_URL } from '@/lib/site';
 
 // One footer for every page.
@@ -29,7 +29,7 @@ export default function SiteFooter() {
             <div style={col}>
               <span style={label}>Services</span>
               <div className="sf-foot-svc">
-                {SERVICES.filter((s) => FOOTER_SERVICES.includes(s.id)).map((s) => <Link key={s.id} className="sf-fl" href={`/services#${s.id}`}>{s.t}</Link>)}
+                {SERVICES.filter((s) => FOOTER_SERVICES.includes(s.id)).map((s) => <Link key={s.id} className="sf-fl" href={serviceHref(s.id)}>{s.t}</Link>)}
               </div>
             </div>
             <div style={col}>
@@ -38,6 +38,8 @@ export default function SiteFooter() {
               <Link className="sf-fl" href="/about">About</Link>
               <Link className="sf-fl" href="/portfolio">Portfolio</Link>
               <Link className="sf-fl" href="/contact">Contact</Link>
+              <Link className="sf-fl" href="/software-house-faisalabad">Software house Faisalabad</Link>
+              <Link className="sf-fl" href="/software-company-manchester">Software company Manchester</Link>
             </div>
             <div style={{ ...col, maxWidth: '240px' }}>
               <span style={label}>Contact</span>

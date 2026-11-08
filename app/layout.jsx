@@ -4,9 +4,13 @@ import { SITE_URL, BUSINESS, SOCIAL } from '@/lib/site';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: 'Bait Systematics — Software, AI & Digital Growth Worldwide', template: '%s' },
+  title: { default: 'Bait Systematics | Software House in Manchester & Faisalabad', template: '%s' },
+  applicationName: 'Bait Systematics',
+  authors: [{ name: 'Bait Systematics', url: SITE_URL }],
+  creator: 'Bait Systematics',
+  publisher: 'Bait Systematics',
   description: BUSINESS.description,
-  keywords: ['software company', 'web development', 'mobile app development', 'AI software', 'agentic AI', 'inventory system', 'pharmacy system', 'POS system', 'SEO', 'Google Ads', 'Facebook Ads', 'Faisalabad', 'Manchester'],
+  keywords: ['Bait Systematics', 'BAIT Systematics', 'software house Faisalabad', 'software house Madina Town', 'software company Manchester', 'web development', 'mobile app development', 'AI software', 'agentic AI', 'inventory system', 'pharmacy software', 'POS system', 'SEO services', 'Google Ads', 'Facebook Ads', 'BAIT International Group'],
   openGraph: {
     type: 'website', siteName: BUSINESS.name, url: SITE_URL,
     title: 'Bait Systematics — Build • Innovate • Grow',
@@ -24,15 +28,26 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Organization', '@id': `${SITE_URL}/#org`, name: BUSINESS.name, url: SITE_URL,
-      logo: `${SITE_URL}/images/bait-systematics-logo-full.png`, email: BUSINESS.email, telephone: BUSINESS.phones,
-      description: BUSINESS.description, founder: BUSINESS.founders.map((name) => ({ '@type': 'Person', name })),
-      parentOrganization: { '@type': 'Organization', name: BUSINESS.parent }, areaServed: 'Worldwide',
+      '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: SITE_URL, name: BUSINESS.name,
+      alternateName: ['BAIT Systematics', 'Bait Systematics Manchester', 'Bait Systematics Faisalabad'], publisher: { '@id': `${SITE_URL}/#org` }, inLanguage: 'en',
+    },
+    {
+      '@type': 'Organization', '@id': `${SITE_URL}/#org`, name: BUSINESS.name, alternateName: 'BAIT Systematics', url: SITE_URL,
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/bait-logo-square.png`, width: 720, height: 720, caption: 'Bait Systematics logo' },
+      image: `${SITE_URL}/images/og-image.png`, email: BUSINESS.email, telephone: BUSINESS.phones, foundingDate: '2024',
+      slogan: 'Build. Innovate. Grow.', description: BUSINESS.description,
+      founder: BUSINESS.people.map((p) => ({ '@id': `${SITE_URL}/#${p.id}` })),
+      parentOrganization: { '@type': 'Organization', name: BUSINESS.parent, foundingDate: '1967' }, areaServed: 'Worldwide',
+      knowsAbout: ['Web development', 'Mobile app development', 'AI software', 'Agentic AI', 'Inventory management systems', 'Pharmacy software', 'POS systems', 'SEO', 'Google Ads', 'Facebook Ads'],
       sameAs: SOCIAL.map((s) => s.url),
     },
+    ...BUSINESS.people.map((p) => ({
+      '@type': 'Person', '@id': `${SITE_URL}/#${p.id}`, name: p.name, jobTitle: p.role, worksFor: { '@id': `${SITE_URL}/#org` },
+      image: `${SITE_URL}${p.photo}`, url: `${SITE_URL}/about`, ...(p.sameAs ? { sameAs: p.sameAs } : {}),
+    })),
     ...BUSINESS.offices.map((o, i) => ({
-      '@type': 'ProfessionalService', '@id': `${SITE_URL}/#office-${i}`, name: o.name, url: SITE_URL,
-      image: `${SITE_URL}/images/og-image.png`, telephone: o.phone, email: BUSINESS.email, parentOrganization: { '@id': `${SITE_URL}/#org` },
+      '@type': 'ProfessionalService', '@id': `${SITE_URL}/#office-${i}`, name: o.name,
+      image: `${SITE_URL}/images/og-image.png`, logo: `${SITE_URL}/images/bait-logo-square.png`, telephone: o.phone, url: `${SITE_URL}${o.page}`, email: BUSINESS.email, parentOrganization: { '@id': `${SITE_URL}/#org` },
       address: { '@type': 'PostalAddress', streetAddress: o.street, addressLocality: o.city, addressRegion: o.region, postalCode: o.postal, addressCountry: o.country },
       openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: o.days, opens: o.opens, closes: o.closes }],
       areaServed: 'Worldwide',

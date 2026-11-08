@@ -1,0 +1,34 @@
+# Bait Systematics
+
+> Bait Systematics is a software house and digital growth company with offices in Manchester, United Kingdom and Faisalabad, Pakistan. It is the technology company of BAIT International Group, a government-licensed overseas recruitment group (licence HRD/3421/LHR) trusted by employers across the Gulf, Europe and Asia since 1967.
+
+- Website: https://baitsystematics.com
+- Founded: 2024
+- Founders: Muhammad Hassan (Co-Founder & Director — clients, partnerships, delivery) and Muhammad Adil (Co-Founder & Lead Engineer — engineering)
+- Email: info@baitsystematics.com
+- Pakistan (head office): 14-Z Commercial Market, Madina Town, Faisalabad 38000 — +92 311 0429799 (WhatsApp) — Mon–Sat 9:00–18:00
+- United Kingdom: 20 Marcliffe Drive, Manchester M19 3XD — +44 7405 449846 — Mon–Fri 9:00–15:00
+- LinkedIn: https://www.linkedin.com/company/bait-systematics/
+- Instagram: https://www.instagram.com/baitsystematics
+
+## Services
+- Web application development, business websites and e-commerce stores
+- Mobile app development (Android, iOS, Flutter)
+- SaaS platforms, APIs and integrations, UI/UX design
+- AI-powered software and agentic AI systems, CRM and WhatsApp automation
+- ERP, inventory management, pharmacy management, POS, school management and recruitment/HR software
+- SEO, Google Ads, Facebook & Instagram ads and social media marketing
+- Website maintenance, hosting and support
+
+## How they work
+- Free 30-minute consultation and a fixed, itemised quote before work starts
+- Clients own the code, designs and IP on final payment
+- Clients worldwide; direct contact with the founders
+
+## Key pages
+- Services: https://baitsystematics.com/services
+- Software house in Faisalabad: https://baitsystematics.com/software-house-faisalabad
+- Software company in Manchester: https://baitsystematics.com/software-company-manchester
+- About and founders: https://baitsystematics.com/about
+- Portfolio: https://baitsystematics.com/portfolio
+- Contact: https://baitsystematics.com/contact

@@ -4,39 +4,17 @@ import SiteFooter from '@/components/SiteFooter';
 import HeroBackground from '@/components/HeroBackground';
 import styles from './services.module.css';
 import ServicesExplorer from './ServicesExplorer';
+import { SERVICE_COPY as copy } from '@/lib/services';
 import Reveal from './Reveal';
 import PageHero from '@/components/PageHero';
 import ProcessSteps from './ProcessSteps';
 
 export const metadata = {
-  title: 'Services — Bait Systematics',
+  title: 'Software Development, AI & Digital Marketing Services | Bait Systematics',
   description: 'AI-powered software, agentic AI, websites, mobile apps, inventory, pharmacy and POS systems, SEO and Google & Facebook ads — explore all 21 Bait Systematics services.',
   alternates: { canonical: '/services' },
 };
 
-const copy = {
-  web: ['Make your workflow work better.', 'Give customers a place to book, teams a place to collaborate and your business a clearer view of its operations. We build custom web applications around the way you work.'],
-  wordpress: ['A website your team can own.', 'Turn visitors into enquiries with a considered, fast-loading website. From company sites to WooCommerce stores, we make managing your content feel straightforward.'],
-  mobile: ['Put your product in their pocket.', 'Keep customers connected wherever they are. We design and build Android and Flutter apps with thoughtful navigation, useful notifications and the integrations your product needs.'],
-  saas: ['Build a product people come back to.', 'Take your idea from an early concept to a subscription platform. Accounts, onboarding, permissions and billing come together in a product built to grow with your customers.'],
-  ai: ['Give repetitive work a new owner.', 'Let AI handle enquiries, read documents and move routine tasks forward. We connect agents to your tools and keep human approval in place where judgment matters.'],
-  crm: ['Keep every lead moving forward.', 'Bring your sales process into one organised system. We configure Zoho CRM, connect your tools and automate follow-ups so your team can focus on the next conversation.'],
-  whatsapp: ['Be there when customers reach out.', 'Turn WhatsApp into a useful part of your customer experience. Answer common questions, share order updates and capture enquiries through the official Business API.'],
-  erp: ['One connected view of your business.', 'Connect stock, sales, finance and people in a system shaped around your operations. Reduce duplicate entry and give each team the information it needs to act.'],
-  ads: ['Turn attention into enquiries.', 'Reach the right people on Google, Facebook and Instagram. We bring campaign strategy, creative and conversion tracking together so you can understand what brings leads in.'],
-  api: ['Make your systems work together.', 'Connect the tools your business relies on. We build documented APIs, payment integrations and background workflows with clear authentication and dependable data handling.'],
-  design: ['Make the next step feel obvious.', 'Help people understand your product from the first screen. We turn research and user journeys into clear interfaces, reusable components and prototypes you can test before development.'],
-  ecommerce: ['A store that sells while you sleep.', 'Give customers a fast, trustworthy place to buy. Payments, delivery and stock work together, so every order flows from checkout to doorstep without manual work.'],
-  aisoft: ['Software that thinks with you.', 'Put AI where it saves real time — searching your records, reading documents, forecasting demand and guiding users. Practical intelligence inside the tools your team already uses.'],
-  inventory: ['Never guess your stock again.', 'See every item across every branch in real time. Scan, transfer, reorder and count with confidence, and stop losing money to dead stock and shortages.'],
-  pharmacy: ['Faster counters. Zero expired stock.', 'Bill customers in seconds, find medicines by generic or brand name and get warned before batches expire. Suppliers, credit and profit stay clear every single day.'],
-  pos: ['Every sale, every branch, one screen.', 'Billing that keeps the queue moving, even when the internet drops. Kitchen orders, loyalty and end-of-day closing come together with live reports for the owner.'],
-  school: ['Run the campus, not the paperwork.', 'Admissions, fees, attendance and results in one system — with a parent app that keeps families informed and fee collection on time.'],
-  hr: ['Built by a recruitment family.', 'BAIT International Group has placed workers overseas since 1967. We turn that experience into software for agencies and HR teams — from CV to visa to deployment.'],
-  seo: ['Be the answer on Google.', 'Rank for the searches your customers already make. We fix the technical basics, write content that earns trust and grow local visibility month after month.'],
-  social: ['Stay seen. Stay remembered.', 'Consistent, on-brand content and quick replies build a following that turns into customers. We plan, design and manage your pages so you can focus on the business.'],
-  ops: ['Keep improving after launch.', 'Give your product the ongoing attention it needs. Hosting, monitoring, security updates and planned improvements help your software keep pace with your business.'],
-};
 const models = [
   { kind: 'Project', title: 'A defined project', tag: 'A clear goal. A focused build.', body: 'For a new website, application or a specific business problem. We agree on the deliverables, timeline and price before development starts.', points: ['Agreed scope and milestones', 'Progress demos throughout the build', 'Launch and handover'], best: 'New products & planned launches' },
   { kind: 'Retainer', title: 'An ongoing partnership', tag: 'A product that keeps getting better.', body: 'For software that is already in use and ready for its next chapter. We plan a monthly backlog around the improvements that matter most.', points: ['A prioritised monthly roadmap', 'Maintenance and product improvements', 'Regular planning and reviews'], best: 'Live products & growing teams' },

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
 import { ArrowUpRight, Check, Clock } from 'lucide-react';
-import { SERVICES } from '@/lib/services';
+import { SERVICES, serviceHref } from '@/lib/services';
 import styles from './services.module.css';
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -78,7 +78,7 @@ export default function ServicesExplorer({ copy }) {
                   <span className={styles.cardIcon} style={{ background: c.bg, color: c.fg }}><s.Icon size={24} strokeWidth={1.9} aria-hidden="true" /></span>
                   <span className={styles.cardNum}>{String(n + 1).padStart(2, '0')}</span>
                 </div>
-                <h3>{s.t}</h3>
+                <h3><Link href={serviceHref(s.id)} className={styles.titleLink}>{s.t}</Link></h3>
                 <p className={styles.cardTag}>{copy[s.id][0]}</p>
                 <p className={styles.cardBody}>{copy[s.id][1]}</p>
                 <ul className={styles.cardList}>

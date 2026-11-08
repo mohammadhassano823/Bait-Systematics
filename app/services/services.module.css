@@ -298,3 +298,4 @@
 .faqIntroContact>a{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:50px;padding:0 17px;border-radius:9px;background:#FFFFFF;color:#161616!important;text-decoration:none;font-size:14px;font-weight:600;transition:background .2s}
 .faqIntroContact>a:hover{background:#FFD9D6}
 @media(max-width:620px){.faqIntroPanel{padding:30px 24px;border-radius:16px}.faqIntroIcon{margin-bottom:24px;width:52px;height:52px}.faqIntroContact{margin-top:24px}}
+.titleLink{color:inherit!important;text-decoration:none}.titleLink:hover{color:#FF5A50!important}
