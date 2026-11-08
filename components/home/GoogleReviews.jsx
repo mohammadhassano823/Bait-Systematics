@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, Star, PenLine } from 'lucide-react';
+import { REVIEW_URL } from '@/lib/site';
 
 // Real Google reviews (from /api/reviews) plus a "write a review" link to the Google Business Profile.
-// Shows nothing until the Google keys are configured, so no placeholder or invented reviews ever appear.
+// Until the Google keys are configured it shows only the invitation to review — never placeholder or invented reviews.
 function Stars({ value, size = 16 }) {
   return (
     <span className="sf-gr-stars" aria-label={`${value} out of 5 stars`}>
@@ -24,8 +25,9 @@ export default function GoogleReviews() {
     return () => { alive = false; };
   }, []);
 
-  if (!data || !data.configured) return null;
-  const { rating, count, reviews = [], writeUrl, mapsUrl } = data;
+  const live = data && data.configured ? data : {};
+  const { rating, count = 0, reviews = [], mapsUrl } = live;
+  const writeUrl = REVIEW_URL || live.writeUrl;
 
   return (
     <section id="reviews" className="sf-gr sf-tone-dark" aria-labelledby="sf-gr-title">
@@ -69,7 +71,7 @@ export default function GoogleReviews() {
           <a className="sf-gr-primary" href={writeUrl} target="_blank" rel="noopener noreferrer"><PenLine size={18} aria-hidden="true" />Write a review on Google</a>
           {mapsUrl && <a className="sf-gr-ghost" href={mapsUrl} target="_blank" rel="noopener noreferrer">See all reviews<ArrowUpRight size={18} aria-hidden="true" /></a>}
         </div>
-        <span className="sf-gr-source">Reviews are shown live from Google.</span>
+        {reviews.length > 0 && <span className="sf-gr-source">Reviews are shown live from Google.</span>}
       </div>
     </section>
   );

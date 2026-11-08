@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { CookieSettingsLink } from '@/components/CookieConsent';
 import { SERVICES, FOOTER_SERVICES } from '@/lib/services';
-import { SOCIAL } from '@/lib/site';
+import { SOCIAL, REVIEW_URL } from '@/lib/site';
 
 // One footer for every page.
 const label = { fontFamily: "'Plus Jakarta Sans', monospace", fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#909090' };
@@ -56,6 +56,7 @@ export default function SiteFooter() {
             </div>
             <div style={col}>
               <span style={label}>Social</span>
+              <a className="sf-fl" href={REVIEW_URL} target="_blank" rel="noopener noreferrer">Review us on Google</a>
               {SOCIAL.map((s) => <a key={s.name} className="sf-fl" href={s.url} target="_blank" rel="noopener noreferrer">{s.name}</a>)}
             </div>
           </div>
