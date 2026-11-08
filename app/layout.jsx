@@ -34,7 +34,7 @@ const jsonLd = {
       '@type': 'ProfessionalService', '@id': `${SITE_URL}/#office-${i}`, name: o.name, url: SITE_URL,
       image: `${SITE_URL}/images/og-image.png`, telephone: o.phone, email: BUSINESS.email, parentOrganization: { '@id': `${SITE_URL}/#org` },
       address: { '@type': 'PostalAddress', streetAddress: o.street, addressLocality: o.city, addressRegion: o.region, postalCode: o.postal, addressCountry: o.country },
-      openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '19:00' }],
+      openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '18:00' }],
       areaServed: 'Worldwide',
     })),
   ],
