@@ -2501,3 +2501,12 @@ a.sf-cx-card:hover{border-color:#EF0800;translate:0 -3px}
 /* Home hero: brand + location line above the headline (part of the H1 for search) */
 .sf-hero-seo{display:block;margin-bottom:14px;font-size:clamp(13px,1.1vw,16px)!important;font-weight:700!important;letter-spacing:.18em!important;line-height:1.4!important;text-transform:uppercase;color:#BDBDBD}
 .sf-hero-seo b{color:#fff;font-weight:800}
+/* Service pages: delivery steps */
+.sf-sv-steps{list-style:none;margin:0;padding:0;counter-reset:step;border-top:1px solid #262626}
+.sf-sv-steps li{counter-increment:step;position:relative;padding:22px 0 22px 64px;border-bottom:1px solid #262626}
+.sf-sv-steps li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:18px;font-size:30px;font-weight:900;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.2px #EF0800}
+.sf-sv-steps strong{display:block;font-size:19px;font-weight:800;color:#fff}
+.sf-sv-steps span{display:block;margin-top:6px;color:#A8A8A8;line-height:1.6}
+.sf-sv-list-tight{margin-top:18px}
+.sf-sv-list-tight li{padding-top:14px;padding-bottom:14px;font-size:16px}
+.sf-sv-list-tight li::before{top:22px}

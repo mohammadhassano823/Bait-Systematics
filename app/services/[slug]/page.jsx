@@ -80,6 +80,42 @@ export default async function ServiceDetail({ params }) {
           </div>
         </section>
 
+        <section className="sf-sv sf-sv-alt" aria-labelledby="sv-process">
+          <div className="sf-sv-wrap sf-sv-grid">
+            <div>
+              <span className="sf-featured-services-eyebrow">HOW WE DELIVER</span>
+              <h2 id="sv-process">From first call to a live <em>{s.short.toLowerCase()}.</em></h2>
+              <p>Every {s.short.toLowerCase()} we build follows the same clear process, so you always know what is happening, what it costs and when it will be ready. You speak directly to the founders throughout — no account managers in between.</p>
+              <p>In practice, this is the kind of result our clients see once the work is live:</p>
+              <ul className="sf-sv-list sf-sv-list-tight">{s.mock.map((m) => <li key={m}>{m}</li>)}</ul>
+            </div>
+            <ol className="sf-sv-steps">
+              <li><strong>Free consultation</strong><span>A 30-minute call to understand your business, your users and what the {s.short.toLowerCase()} must achieve.</span></li>
+              <li><strong>Scope and fixed quote</strong><span>A written plan covering features, timeline and an itemised, fixed price — agreed before any work starts.</span></li>
+              <li><strong>Design and build</strong><span>We design, build and test in short milestones, with regular demos so you can give feedback early.</span></li>
+              <li><strong>Launch and handover</strong><span>We launch, train your team and hand over the code, accounts and documentation — it is all yours.</span></li>
+              <li><strong>Support and growth</strong><span>Optional monthly support for hosting, updates, security and new features as your business grows.</span></li>
+            </ol>
+          </div>
+        </section>
+
+        <section className="sf-sv" aria-labelledby="sv-why">
+          <div className="sf-sv-wrap sf-sv-grid">
+            <div>
+              <span className="sf-featured-services-eyebrow">WHY BAIT SYSTEMATICS</span>
+              <h2 id="sv-why">A partner with <em>decades behind it.</em></h2>
+              <p>Bait Systematics is the technology company of BAIT International Group, a government-licensed overseas recruitment group trusted by employers across the Gulf, Europe and Asia since 1967. We bring that same discipline — understand exactly what is needed and deliver it on time — to every {s.t.toLowerCase()} project.</p>
+              <p>With offices in Manchester, United Kingdom and Madina Town, Faisalabad, Pakistan, we work with businesses worldwide: clinics, shops, schools, agencies, factories and fast-growing startups.</p>
+            </div>
+            <ul className="sf-sv-points">
+              <li><strong>Fixed, honest pricing</strong><span>You know the full cost before we start. No hidden extras and no surprise invoices.</span></li>
+              <li><strong>You own everything</strong><span>Source code, designs and accounts transfer to you on final payment.</span></li>
+              <li><strong>Founders on every project</strong><span>Muhammad Hassan leads your project and Muhammad Adil leads engineering — you always talk to the people responsible.</span></li>
+              <li><strong>Support after launch</strong><span>We stay with you after go-live with fixes, improvements and new features.</span></li>
+            </ul>
+          </div>
+        </section>
+
         <section className="sf-sv sf-sv-alt" aria-labelledby="sv-faq">
           <div className="sf-sv-wrap sf-sv-grid">
             <div>
