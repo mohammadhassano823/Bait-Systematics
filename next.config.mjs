@@ -2,6 +2,8 @@ import { PHASE_DEVELOPMENT_SERVER } from 'next/constants.js';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Cloudflare Workers has no built-in Next image optimiser; images in /public are already compressed.
+  images: { unoptimized: true },
   // keep old .html URLs working
   async redirects() {
     return ['about', 'services', 'portfolio', 'contact', 'privacy', 'terms']
