@@ -17,7 +17,7 @@ export default function SiteFooter() {
           <div style={{ maxWidth: '360px' }}>
             <img src="/images/bait-systematics-logo-full.png" alt="Bait Systematics — Build, Innovate, Grow" className="sf-footer-logo" width="1200" height="345" />
             <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '30px', fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.15 }}>
-              Build smarter. Work faster. <span style={{ color: '#EF0800' }}>Grow bigger.</span>
+              Build. Innovate. <span style={{ color: '#EF0800' }}>Grow.</span>
             </div>
             <p style={{ margin: '18px 0 0', fontSize: '14px', lineHeight: 1.6, color: '#A3A3A3' }}>Bait Systematics is the technology company of BAIT International Group — trusted by employers worldwide since 1967.</p>
             <Link className="sf-btn" href="/contact" style={{ marginTop: '26px', display: 'inline-flex', alignItems: 'center', gap: '8px', minHeight: '50px', padding: '0 22px', borderRadius: '999px', background: '#EF0800', color: '#FFFFFF', fontWeight: 700, fontSize: '15px', textDecoration: 'none' }}>
