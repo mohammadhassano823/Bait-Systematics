@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, Star, PenLine } from 'lucide-react';
 import { REVIEW_URL } from '@/lib/site';
+import { GOOGLE_REVIEWS, GOOGLE_PROFILE_URL } from '@/lib/reviews';
 
 // Real Google reviews (from /api/reviews) plus a "write a review" link to the Google Business Profile.
 // Until the Google keys are configured it shows only the invitation to review — never placeholder or invented reviews.
@@ -25,7 +26,12 @@ export default function GoogleReviews() {
     return () => { alive = false; };
   }, []);
 
-  const live = data && data.configured ? data : {};
+  // Live reviews from the Places API when configured; otherwise the copied Google reviews in lib/reviews.js.
+  const hasLive = data && data.configured && !data.error && (data.reviews || []).length > 0;
+  const live = hasLive ? data : {
+    reviews: GOOGLE_REVIEWS, count: GOOGLE_REVIEWS.length, mapsUrl: GOOGLE_PROFILE_URL,
+    rating: GOOGLE_REVIEWS.length ? GOOGLE_REVIEWS.reduce((t, r) => t + r.rating, 0) / GOOGLE_REVIEWS.length : null,
+  };
   const { rating, count = 0, reviews = [], mapsUrl } = live;
   const writeUrl = REVIEW_URL || live.writeUrl;
 
@@ -71,7 +77,7 @@ export default function GoogleReviews() {
           <a className="sf-gr-primary" href={writeUrl} target="_blank" rel="noopener noreferrer"><PenLine size={18} aria-hidden="true" />Write a review on Google</a>
           {mapsUrl && <a className="sf-gr-ghost" href={mapsUrl} target="_blank" rel="noopener noreferrer">See all reviews<ArrowUpRight size={18} aria-hidden="true" /></a>}
         </div>
-        {reviews.length > 0 && <span className="sf-gr-source">Reviews are shown live from Google.</span>}
+        {reviews.length > 0 && <span className="sf-gr-source">{hasLive ? 'Reviews are shown live from Google.' : 'Reviews from our Google Business Profile.'}</span>}
       </div>
     </section>
   );
