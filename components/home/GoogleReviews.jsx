@@ -29,9 +29,11 @@ export default function GoogleReviews() {
   // Live reviews from the Places API when configured; otherwise the copied Google reviews in lib/reviews.js.
   const hasLive = data && data.configured && !data.error && (data.reviews || []).length > 0;
   const live = hasLive ? data : {
-    reviews: GOOGLE_REVIEWS, count: GOOGLE_RATING.count, mapsUrl: GOOGLE_PROFILE_URL,
-    rating: GOOGLE_RATING.rating,
+    reviews: GOOGLE_REVIEWS, count: GOOGLE_RATING?.count || GOOGLE_REVIEWS.length, mapsUrl: GOOGLE_PROFILE_URL,
+    rating: GOOGLE_RATING?.rating || null,
   };
+  // Hidden until there are reviews to show (live API or copied reviews).
+  if (!hasLive && GOOGLE_REVIEWS.length === 0) return null;
   const { rating, count = 0, reviews = [], mapsUrl } = live;
   const writeUrl = REVIEW_URL || live.writeUrl;
 
