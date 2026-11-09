@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, Star, PenLine } from 'lucide-react';
 import { REVIEW_URL } from '@/lib/site';
-import { GOOGLE_REVIEWS, GOOGLE_PROFILE_URL } from '@/lib/reviews';
+import { GOOGLE_REVIEWS, GOOGLE_PROFILE_URL, GOOGLE_RATING } from '@/lib/reviews';
 
 // Real Google reviews (from /api/reviews) plus a "write a review" link to the Google Business Profile.
 // Until the Google keys are configured it shows only the invitation to review — never placeholder or invented reviews.
@@ -29,8 +29,8 @@ export default function GoogleReviews() {
   // Live reviews from the Places API when configured; otherwise the copied Google reviews in lib/reviews.js.
   const hasLive = data && data.configured && !data.error && (data.reviews || []).length > 0;
   const live = hasLive ? data : {
-    reviews: GOOGLE_REVIEWS, count: GOOGLE_REVIEWS.length, mapsUrl: GOOGLE_PROFILE_URL,
-    rating: GOOGLE_REVIEWS.length ? GOOGLE_REVIEWS.reduce((t, r) => t + r.rating, 0) / GOOGLE_REVIEWS.length : null,
+    reviews: GOOGLE_REVIEWS, count: GOOGLE_RATING.count, mapsUrl: GOOGLE_PROFILE_URL,
+    rating: GOOGLE_RATING.rating,
   };
   const { rating, count = 0, reviews = [], mapsUrl } = live;
   const writeUrl = REVIEW_URL || live.writeUrl;
