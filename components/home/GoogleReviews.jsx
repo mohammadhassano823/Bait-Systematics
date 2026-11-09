@@ -59,6 +59,7 @@ export default function GoogleReviews() {
               <motion.article key={r.author + i} className="sf-gr-card"
                 initial={reducedMotion ? false : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }} transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : i * 0.08 }}>
+                <a className="sf-gr-cardlink" href={r.authorUrl || mapsUrl} target="_blank" rel="noopener noreferrer" aria-label={`Read ${r.author}'s review on Google`} />
                 <Stars value={r.rating} />
                 <p>“{r.text}”</p>
                 <footer>

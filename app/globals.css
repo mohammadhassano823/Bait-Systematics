@@ -2510,3 +2510,7 @@ a.sf-cx-card:hover{border-color:#EF0800;translate:0 -3px}
 .sf-sv-list-tight{margin-top:18px}
 .sf-sv-list-tight li{padding-top:14px;padding-bottom:14px;font-size:16px}
 .sf-sv-list-tight li::before{top:22px}
+/* Review cards open the review on Google */
+.sf-gr-card{position:relative;transition:border-color .2s,translate .2s}
+.sf-gr-cardlink{position:absolute;inset:0;z-index:2;border-radius:inherit}
+.sf-gr-card:hover{border-color:#EF0800;translate:0 -3px}
