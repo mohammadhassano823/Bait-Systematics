@@ -40,6 +40,7 @@ export default function SiteFooter() {
               <Link className="sf-fl" href="/contact">Contact</Link>
               <Link className="sf-fl" href="/software-house-faisalabad">Software house Faisalabad</Link>
               <Link className="sf-fl" href="/software-company-manchester">Software company Manchester</Link>
+              <Link className="sf-fl" href="/bait-international-group">BAIT International Group</Link>
             </div>
             <div style={{ ...col, maxWidth: '240px' }}>
               <span style={label}>Contact</span>
