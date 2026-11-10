@@ -2515,3 +2515,4 @@ a.sf-cx-card:hover{border-color:#EF0800;translate:0 -3px}
 .sf-gr-cardlink{position:absolute;inset:0;z-index:2;border-radius:inherit}
 .sf-gr-card:hover{border-color:#EF0800;translate:0 -3px}
 .sf-sv-chips span{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid #2E2E2E;font-size:15px;font-weight:700;color:#E0E0E0}
+.sf-sv-grid p a{color:#FF8A82!important;font-weight:700}

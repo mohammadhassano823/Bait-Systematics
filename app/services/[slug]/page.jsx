@@ -106,6 +106,7 @@ export default async function ServiceDetail({ params }) {
               <h2 id="sv-why">A partner with <em>decades behind it.</em></h2>
               <p>Bait Systematics is the technology company of BAIT International Group, a government-licensed overseas recruitment group trusted by employers across the Gulf, Europe and Asia since 1967. We bring that same discipline — understand exactly what is needed and deliver it on time — to every {s.t.toLowerCase()} project.</p>
               <p>With offices in Manchester, United Kingdom and Madina Town, Faisalabad, Pakistan, we work with businesses worldwide: clinics, shops, schools, agencies, factories and fast-growing startups.</p>
+              <p>Looking for a local team? See our <Link href="/software-house-faisalabad">software house in Faisalabad</Link> and our <Link href="/software-company-manchester">software company in Manchester</Link>.</p>
             </div>
             <ul className="sf-sv-points">
               <li><strong>Fixed, honest pricing</strong><span>You know the full cost before we start. No hidden extras and no surprise invoices.</span></li>

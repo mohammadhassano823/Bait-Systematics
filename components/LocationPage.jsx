@@ -39,6 +39,21 @@ export default function LocationPage({ c }) {
           </div>
         </section>
 
+        {(c.extra || []).map((x, n) => (
+          <section key={x.title} className={'sf-sv' + (n % 2 ? ' sf-sv-alt' : '')} aria-labelledby={`loc-extra-${n}`}>
+            <div className="sf-sv-wrap sf-sv-grid">
+              <div>
+                <span className="sf-featured-services-eyebrow">{x.eyebrow}</span>
+                <h2 id={`loc-extra-${n}`}>{x.title}</h2>
+              </div>
+              <div>
+                {x.paras.map((p) => <p key={p}>{p}</p>)}
+                {x.link && <Link className="sf-about-text-link" href={x.link[0]}>{x.link[1]}<ArrowUpRight size={18} aria-hidden="true" /></Link>}
+              </div>
+            </div>
+          </section>
+        ))}
+
         <section className="sf-sv" aria-labelledby="loc-visit">
           <div className="sf-sv-wrap sf-sv-grid">
             <div>

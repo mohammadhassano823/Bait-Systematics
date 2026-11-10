@@ -33,6 +33,24 @@ const c = {
   phone: '+44 7405 449846', whatsapp: '447405449846',
   hours: 'Monday – Friday, 9:00 am – 3:00 pm (UK)',
   maps: 'https://maps.google.com/?q=20+Marcliffe+Drive+Manchester+M19+3XD',
+  extra: [
+    {
+      eyebrow: 'WEB DESIGN IN MANCHESTER', title: 'Web design and development for Manchester businesses.',
+      paras: [
+        'Fast, modern websites and online stores for UK businesses — built mobile-first, optimised for Google and connected to your booking, payment and CRM tools, with GDPR-friendly cookie consent included.',
+        'You get a fixed quote in pounds, regular demos and full ownership of your site, with a Manchester contact for meetings and calls on UK time.',
+      ],
+      link: ['/services/website-design-development', 'Web design services'],
+    },
+    {
+      eyebrow: 'APP AND SOFTWARE DEVELOPMENT', title: 'App developers and custom software for UK companies.',
+      paras: [
+        'Android and iOS apps, web applications, SaaS platforms and AI-powered tools — designed around your workflow and built by our own engineering team, never outsourced.',
+        'Because our development team is based in Faisalabad, UK clients get senior engineering at a cost that makes sense, without compromising on communication or quality.',
+      ],
+      link: ['/services/web-application-development', 'Web and app development'],
+    },
+  ],
   faqs: [
     { q: 'Where is Bait Systematics in Manchester?', a: 'Our UK office is at 20 Marcliffe Drive, Manchester M19 3XD. We are available Monday to Friday, 9 am to 3 pm UK time, and by appointment.' },
     { q: 'How much does a website or app cost in the UK?', a: 'Every project is different. After a free consultation we give you a fixed, itemised quote in pounds — that is exactly what you pay, with no hidden extras.' },
