@@ -1,6 +1,7 @@
 import ContactPage from '@/components/ContactPage';
+import { pageMeta } from '@/lib/seo';
 
-export const metadata = { title: "Contact Bait Systematics — Faisalabad & Manchester", description: "Send a query on WhatsApp, email info@baitsystematics.com or visit our offices in Faisalabad, Pakistan and Manchester, UK.", alternates: { canonical: "/contact" } };
+export const metadata = pageMeta({"title":"Contact Bait Systematics — Faisalabad & Manchester","description":"Contact Bait Systematics in Manchester or Faisalabad: WhatsApp +92 311 0429799 or email info@baitsystematics.com for a free consultation and fixed quote.","path":"/contact"});
 
 export default function Page() {
   return <ContactPage />;

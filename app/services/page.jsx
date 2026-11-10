@@ -8,12 +8,9 @@ import { SERVICE_COPY as copy } from '@/lib/services';
 import Reveal from './Reveal';
 import PageHero from '@/components/PageHero';
 import ProcessSteps from './ProcessSteps';
+import { pageMeta } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Software Development, AI & Digital Marketing Services | Bait Systematics',
-  description: 'AI-powered software, agentic AI, websites, mobile apps, inventory, pharmacy and POS systems, SEO and Google & Facebook ads — explore all 21 Bait Systematics services.',
-  alternates: { canonical: '/services' },
-};
+export const metadata = pageMeta({"title":"Software Development, AI & Digital Marketing Services | Bait Systematics","description":"Websites, mobile apps, AI-powered software, inventory, pharmacy and POS systems, SEO and Google & Facebook ads — 21 services from Bait Systematics.","path":"/services"});
 
 const models = [
   { kind: 'Project', title: 'A defined project', tag: 'A clear goal. A focused build.', body: 'For a new website, application or a specific business problem. We agree on the deliverables, timeline and price before development starts.', points: ['Agreed scope and milestones', 'Progress demos throughout the build', 'Launch and handover'], best: 'New products & planned launches' },

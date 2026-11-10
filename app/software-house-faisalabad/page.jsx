@@ -1,12 +1,9 @@
 import LocationPage from '@/components/LocationPage';
+import { pageMeta } from '@/lib/seo';
 
 const PATH = '/software-house-faisalabad';
 
-export const metadata = {
-  title: 'Software House in Faisalabad, Madina Town | Bait Systematics',
-  description: 'Bait Systematics is a software house in Madina Town, Faisalabad building websites, mobile apps, AI software, inventory, pharmacy and POS systems, plus SEO and Google & Facebook ads. Free consultation.',
-  alternates: { canonical: PATH },
-};
+export const metadata = pageMeta({"title":"Software House in Faisalabad, Madina Town | Bait Systematics","description":"Bait Systematics is a software house in Madina Town, Faisalabad: website design, app development, AI software, POS and pharmacy systems, SEO and ads.","path":"/software-house-faisalabad"});
 
 const c = {
   path: PATH, crumb: 'Software house in Faisalabad', office: 0, city: 'Faisalabad',

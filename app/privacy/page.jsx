@@ -3,8 +3,9 @@ import Link from 'next/link';
 import SiteFooter from '@/components/SiteFooter';
 import PageHero from '@/components/PageHero';
 import LegalBody from '@/components/LegalBody';
+import { pageMeta } from '@/lib/seo';
 
-export const metadata = { title: "Privacy Policy — Bait Systematics", description: "How Bait Systematics collects, uses and protects your information, and your cookie choices.", alternates: { canonical: "/privacy" } };
+export const metadata = pageMeta({"title":"Privacy Policy — Bait Systematics","description":"How Bait Systematics collects, uses and protects your information, and the cookie choices you have on our website.","path":"/privacy"});
 
 function renderVals() {
     const raw = [

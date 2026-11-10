@@ -3,8 +3,9 @@ import Link from 'next/link';
 import SiteFooter from '@/components/SiteFooter';
 import PageHero from '@/components/PageHero';
 import LegalBody from '@/components/LegalBody';
+import { pageMeta } from '@/lib/seo';
 
-export const metadata = { title: "Terms of Service — Bait Systematics", description: "The terms for using the Bait Systematics website and working with us on software, AI and marketing projects.", alternates: { canonical: "/terms" } };
+export const metadata = pageMeta({"title":"Terms of Service — Bait Systematics","description":"The terms for using the Bait Systematics website and working with us on software, AI and marketing projects.","path":"/terms"});
 
 function renderVals() {
     const raw = [

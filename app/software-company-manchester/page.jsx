@@ -1,12 +1,9 @@
 import LocationPage from '@/components/LocationPage';
+import { pageMeta } from '@/lib/seo';
 
 const PATH = '/software-company-manchester';
 
-export const metadata = {
-  title: 'Software Company in Manchester, UK | Bait Systematics',
-  description: 'Bait Systematics is a Manchester software company building websites, web and mobile apps, AI software and business systems, plus SEO and Google & Facebook ads for UK businesses. Free consultation, fixed quotes.',
-  alternates: { canonical: PATH },
-};
+export const metadata = pageMeta({"title":"Software Company in Manchester, UK | Bait Systematics","description":"Bait Systematics is a Manchester software company: web design, app development, AI software and business systems for UK businesses. Free consultation.","path":"/software-company-manchester"});
 
 const c = {
   path: PATH, crumb: 'Software company in Manchester', office: 1, city: 'Manchester',

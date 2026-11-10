@@ -6,7 +6,7 @@ import SiteFooter from '@/components/SiteFooter';
 import PageHero from '@/components/PageHero';
 import { SERVICES, SERVICE_COPY, SERVICE_SLUGS, serviceBySlug, serviceHref } from '@/lib/services';
 import { SITE_URL } from '@/lib/site';
-import { JsonLd, breadcrumbLd, faqLd } from '@/lib/seo';
+import { JsonLd, breadcrumbLd, faqLd, pageMeta } from '@/lib/seo';
 
 // One page per service, e.g. /services/pharmacy-management-software — each targets its own search terms.
 export function generateStaticParams() {
@@ -20,12 +20,8 @@ export async function generateMetadata({ params }) {
   const s = serviceBySlug(slug);
   if (!s) return {};
   const title = `${s.t} in Manchester & Faisalabad | Bait Systematics`;
-  const description = `${s.long} Free consultation and a fixed quote from Bait Systematics — serving the UK, Pakistan and clients worldwide.`;
-  return {
-    title, description,
-    alternates: { canonical: `/services/${slug}` },
-    openGraph: { title, description, url: `${SITE_URL}/services/${slug}`, images: [{ url: imageOf(s), alt: `${s.t} by Bait Systematics` }] },
-  };
+  const description = `${s.d} Free consultation and a fixed quote from Bait Systematics.`.slice(0, 160);
+  return pageMeta({ title, description, path: `/services/${slug}`, image: imageOf(s) });
 }
 
 function faqsFor(s) {

@@ -4,16 +4,12 @@ import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import PageHero from '@/components/PageHero';
 import { SITE_URL } from '@/lib/site';
-import { JsonLd, breadcrumbLd, faqLd } from '@/lib/seo';
+import { JsonLd, breadcrumbLd, faqLd, pageMeta } from '@/lib/seo';
 
 // Page about the parent company, BAIT International Group (its own website is offline), linking to Bait Systematics.
 const PATH = '/bait-international-group';
 
-export const metadata = {
-  title: 'BAIT International Group — Overseas Recruitment Since 1967 | Faisalabad, Pakistan',
-  description: 'BAIT International Group is a government-licensed Overseas Employment Promoter (HRD/3421/LHR) in Madina Town, Faisalabad, recruiting doctors, engineers, technicians and skilled workers for the Gulf, Europe and Asia since 1967.',
-  alternates: { canonical: PATH },
-};
+export const metadata = pageMeta({"title":"BAIT International Group — Overseas Recruitment Since 1967 | Faisalabad, Pakistan","description":"BAIT International Group is a licensed Overseas Employment Promoter (HRD/3421/LHR) in Faisalabad, recruiting skilled workers for the Gulf and Asia since 1967.","path":"/bait-international-group"});
 
 const STATS = [
   ['1967', 'Recruiting for employers abroad'],
